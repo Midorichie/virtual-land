@@ -1,13 +1,17 @@
 [project]
 name = "virtual-land"
 authors = ["Your Name"]
-description = "A smart contract for virtual land ownership and trading"
+description = "A smart contract for virtual land ownership and trading with extended functionality"
 telemetry = false
 requirements = []
 
 [contracts.virtual-land]
 path = "contracts/virtual-land.clar"
 depends_on = []
+
+[contracts.virtual-land-registry]
+path = "contracts/virtual-land-registry.clar"
+depends_on = ["virtual-land"]
 
 [repl.analysis]
 passes = ["check_checker"]
